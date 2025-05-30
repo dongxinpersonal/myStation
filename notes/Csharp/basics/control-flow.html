@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>C#控制流 - C#知识大全</title>
+    <link rel="icon" href="/assets/images/000.gif" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/css/common.css" />
   </head>
   <body>
@@ -196,5 +197,15 @@ int Divide(int a, int b)
       <p>最后更新: <time datetime="2023-11-15">2025年5月30日</time></p>
       <p>© C#学习笔记</p>
     </footer>
+    <!-- 在body底部添加 -->
+    <script>
+      // 简单的返回按钮功能
+      document.querySelectorAll('.btn[href="#back"]').forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          history.back();
+        });
+      });
+    </script>
   </body>
 </html>

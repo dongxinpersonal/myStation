@@ -93,6 +93,7 @@ h1 {
 
 /* ========== 按钮 ========== */
 .btn {
+  margin: 10px 0;
   display: inline-block;
   padding: 8px 15px;
   background-color: var(--primary-color);
@@ -103,7 +104,8 @@ h1 {
 }
 
 .btn:hover {
-  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* ========== 特殊组件 ========== */
@@ -169,4 +171,49 @@ footer {
   text-align: center;
   color: var(--text-light);
   font-size: 0.9em;
+}
+/* 添加导航样式 */
+.site-header {
+  background: linear-gradient(135deg, #3498db, #2874a6);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  pre {
+    padding: 10px;
+    font-size: 0.9em;
+  }
 }
