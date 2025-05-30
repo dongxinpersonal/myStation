@@ -1,62 +1,103 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>东心小破绽</title>
+    <title>学习笔记</title>
     <style>
-        body {
-            margin: 0;
-        }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
     </style>
-     <style>
-        img{
-            max-width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
+  </head>
 
-    </style>
-</head>
+  <body>
+    <!-- 导航栏 -->
+    <nav style="background-color: #333; padding: 15px">
+      <div style="max-width: 1200px; margin: 0 auto">
+        <a
+          href="/"
+          style="color: white; text-decoration: none; font-weight: bold"
+          >学习笔记</a
+        >
+        <div style="float: right">
+          <a
+            href="/notes"
+            style="color: white; text-decoration: none; margin-left: 20px"
+            >笔记</a
+          >
+          <a
+            href="/categories"
+            style="color: white; text-decoration: none; margin-left: 20px"
+            >分类</a
+          >
+          <a
+            href="/about"
+            style="color: white; text-decoration: none; margin-left: 20px"
+            >关于</a
+          >
+        </div>
+      </div>
+    </nav>
 
-<body>
-    <div style="
-        background-color: #f1f1f1;
-        text-align: center;
-        padding: 40px;
-        ">
-        <img src="https://github.com/dongxinpersonal/myStation/raw/main/000.gif" alt="1" width="1000px" height="100px">
+    <!-- 内容区 -->
+    <div style="max-width: 800px; margin: 30px auto; padding: 20px">
+      <h1 style="border-bottom: 1px solid #eee; padding-bottom: 10px">
+        最新笔记
+      </h1>
+
+      <!-- 笔记列表 -->
+      <div style="margin-top: 30px">
+        <div
+          style="
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #eee;
+          "
+        >
+          <h2>
+            <a href="/note/1" style="text-decoration: none; color: #333"
+              >笔记标题1</a
+            >
+          </h2>
+          <p style="color: #666; font-size: 14px">2023-11-01 | 分类: 编程</p>
+          <p>这里是笔记的简短摘要...</p>
+        </div>
+
+        <div
+          style="
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #eee;
+          "
+        >
+          <h2>
+            <a href="/note/2" style="text-decoration: none; color: #333"
+              >笔记标题2</a
+            >
+          </h2>
+          <p style="color: #666; font-size: 14px">2023-10-25 | 分类: 算法</p>
+          <p>这里是笔记的简短摘要...</p>
+        </div>
+      </div>
     </div>
-    <div style="
-    max-width: 700px;
-    margin: 30px auto;
-    padding: 15px;
-    line-height: 1.7;
-    
-    ">
-        <p>我的小破绽</p>
-        <p>我的小破绽</p>
-        <p>我的小破绽</p>
-        <p>我的小破绽</p>
-        <p>我的小破绽</p>
-        <p>我的小破绽</p>
-        <p>我的小破绽</p>
-        <p>hhhhhhhhh</p>
-        <p>hhhhhhhhh</p>
-        <p>hhhhhhhhh</p>
-        <p>hhhhhhhhh</p>
-    </div>
-    <div style="
-            background-color: #f1f1f1;
-            text-align: center;
-            padding: 40px;
-            font-size: 12px;
-            ">
-        <p>我的网站</p>
-        <a href="https://studyblog.nightstardawn.fun/">友情链接</a>
-    </div>
 
-</body>
-
+    <!-- 页脚 -->
+    <footer
+      style="background-color: #f1f1f1; text-align: center; padding: 30px"
+    >
+      <p>© 2023 我的学习笔记</p>
+      <p style="font-size: 12px">
+        Powered by
+        <a href="https://github.com/dongxinpersonal/myStation">myStation</a>
+      </p>
+    </footer>
+  </body>
 </html>
