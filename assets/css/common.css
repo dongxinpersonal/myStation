@@ -1,0 +1,172 @@
+/* assets/css/common.css */
+
+/* ========== 基础样式 ========== */
+:root {
+  --primary-color: #3498db; /* 主蓝色 */
+  --primary-dark: #2874a6; /* 深蓝色 */
+  --secondary-color: #2c3e50; /* 深蓝灰 */
+  --light-color: #f8f9fa; /* 浅灰背景 */
+  --lighter-color: #e7f5fe; /* 更浅蓝 */
+  --text-color: #333; /* 正文颜色 */
+  --text-light: #666; /* 浅色文本 */
+  --border-color: #ddd; /* 边框色 */
+  --warning-color: #f39c12; /* 橙色警告 */
+  --warning-bg: #fef5e7; /* 警告背景 */
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* ========== 全局样式 ========== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--secondary-color);
+}
+
+h1 {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+}
+
+/* ========== 卡片组件 ========== */
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+}
+
+.card-title {
+  color: var(--primary-color);
+  margin-top: 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* ========== 链接列表 ========== */
+.link-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.link-item {
+  margin: 10px 0;
+}
+
+.link-item a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+  padding: 10px 15px;
+  border-left: 3px solid var(--primary-color);
+  transition: var(--transition);
+  background-color: var(--light-color);
+}
+
+.link-item a:hover {
+  background-color: var(--lighter-color);
+}
+
+/* ========== 按钮 ========== */
+.btn {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ========== 特殊组件 ========== */
+.note {
+  background-color: var(--lighter-color);
+  border-left: 4px solid var(--primary-color);
+  padding: 10px 15px;
+  margin: 15px 0;
+}
+
+.warning {
+  background-color: var(--warning-bg);
+  border-left: 4px solid var(--warning-color);
+  padding: 10px 15px;
+  margin: 15px 0;
+}
+
+/* ========== 表格 ========== */
+.method-table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.method-table th {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: left;
+  padding: 10px;
+}
+
+.method-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.method-table tr:nth-child(even) {
+  background-color: var(--light-color);
+}
+
+/* ========== 代码块 ========== */
+pre {
+  background-color: #282c34;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  color: #abb2bf;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: "Consolas", "Courier New", monospace;
+  color: #333;
+}
+
+/* ========== 页脚 ========== */
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.9em;
+}

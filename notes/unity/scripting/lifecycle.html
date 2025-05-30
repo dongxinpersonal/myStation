@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MonoBehaviour生命周期 - Unity知识</title>
+    <link rel="stylesheet" href="/assets/css/common.css" />
+  </head>
+  <body>
+    <header>
+      <h1>MonoBehaviour生命周期</h1>
+      <a href="../unity.html" class="btn">返回目录</a>
+    </header>
+
+    <main>
+      <div class="note">
+        脚本生命周期方法在特定时间由Unity自动调用，理解这些方法的执行顺序至关重要
+      </div>
+
+      <pre><code>using UnityEngine;
+
+public class ExampleScript : MonoBehaviour
+{
+    // 初始化(脚本启用时调用)
+    void Awake() { /* ... */ }
+    
+    // 开始(第一帧更新前调用)
+    void Start() { /* ... */ }
+    
+    // 每帧更新
+    void Update() { /* ... */ }
+    
+    // 固定时间步长更新(用于物理计算)
+    void FixedUpdate() { /* ... */ }
+}</code></pre>
+
+      <table class="method-table">
+        <tr>
+          <th>方法</th>
+          <th>调用时机</th>
+        </tr>
+        <tr>
+          <td>Awake</td>
+          <td>脚本实例被创建时调用，无论脚本是否启用</td>
+        </tr>
+        <tr>
+          <td>OnEnable</td>
+          <td>脚本启用时调用</td>
+        </tr>
+        <tr>
+          <td>Start</td>
+          <td>在Update第一次调用前执行</td>
+        </tr>
+        <tr>
+          <td>Update</td>
+          <td>每帧调用一次</td>
+        </tr>
+        <tr>
+          <td>LateUpdate</td>
+          <td>在所有Update调用后执行</td>
+        </tr>
+        <tr>
+          <td>OnDisable</td>
+          <td>脚本禁用时调用</td>
+        </tr>
+        <tr>
+          <td>OnDestroy</td>
+          <td>对象销毁时调用</td>
+        </tr>
+      </table>
+    </main>
+
+    <footer>
+      <p>最后更新: <time datetime="2023-11-15">2025年5月30日</time></p>
+      <p>© Unity学习笔记</p>
+    </footer>
+  </body>
+</html>

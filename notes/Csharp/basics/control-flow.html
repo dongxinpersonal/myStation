@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C#控制流 - C#知识大全</title>
+    <link rel="stylesheet" href="/assets/css/common.css" />
+  </head>
+  <body>
+    <header>
+      <h1>C# 控制流语句</h1>
+      <a href="/notes/Csharp/csharp.html" class="btn">返回目录</a>
+    </header>
+
+    <main>
+      <section>
+        <h2>1. 条件语句</h2>
+
+        <h3>1.1 if-else 语句</h3>
+        <pre><code>// 基本形式
+if (age >= 18)
+{
+    Console.WriteLine("成年人");
+}
+else
+{
+    Console.WriteLine("未成年人");
+}
+
+// 多条件判断
+if (score >= 90)
+{
+    Console.WriteLine("优秀");
+}
+else if (score >= 60)
+{
+    Console.WriteLine("及格");
+}
+else
+{
+    Console.WriteLine("不及格");
+}</code></pre>
+
+        <div class="note">
+          <strong>三元运算符</strong>：简单条件判断可使用三元运算符 ? :
+          <pre><code>string result = (age >= 18) ? "成年人" : "未成年人";</code></pre>
+        </div>
+
+        <h3>1.2 switch 语句</h3>
+        <pre><code>// 传统switch
+switch (dayOfWeek)
+{
+    case DayOfWeek.Monday:
+        Console.WriteLine("星期一");
+        break;
+    case DayOfWeek.Tuesday:
+        Console.WriteLine("星期二");
+        break;
+    // ...
+    default:
+        Console.WriteLine("周末");
+        break;
+}
+
+// C# 8+ 的switch表达式
+string dayType = dayOfWeek switch
+{
+    DayOfWeek.Monday or DayOfWeek.Tuesday or DayOfWeek.Wednesday 
+        or DayOfWeek.Thursday or DayOfWeek.Friday => "工作日",
+    _ => "周末"  // _ 表示默认情况
+};</code></pre>
+      </section>
+
+      <section>
+        <h2>2. 循环语句</h2>
+
+        <h3>2.1 for 循环</h3>
+        <pre><code>// 基本for循环
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+}
+
+// 遍历数组
+for (int i = 0; i < array.Length; i++)
+{
+    Console.WriteLine(array[i]);
+}</code></pre>
+
+        <h3>2.2 foreach 循环</h3>
+        <pre><code>// 遍历集合
+foreach (var item in collection)
+{
+    Console.WriteLine(item);
+}
+
+// 遍历字典
+foreach (KeyValuePair&lt;string, int&gt; pair in dictionary)
+{
+    Console.WriteLine($"{pair.Key}: {pair.Value}");
+}</code></pre>
+
+        <h3>2.3 while 和 do-while 循环</h3>
+        <pre><code>// while循环
+while (condition)
+{
+    // 执行代码
+}
+
+// do-while循环
+do
+{
+    // 至少执行一次
+} while (condition);</code></pre>
+
+        <div class="warning">
+          <strong>注意：</strong>避免无限循环，确保循环条件最终会变为false
+        </div>
+      </section>
+
+      <section>
+        <h2>3. 跳转语句</h2>
+
+        <h3>3.1 break 和 continue</h3>
+        <pre><code>// break示例
+for (int i = 0; i < 100; i++)
+{
+    if (i == 50)
+    {
+        break;  // 立即退出循环
+    }
+    Console.WriteLine(i);
+}
+
+// continue示例
+for (int i = 0; i < 10; i++)
+{
+    if (i % 2 == 0)
+    {
+        continue;  // 跳过本次循环剩余代码
+    }
+    Console.WriteLine(i);  // 只输出奇数
+}</code></pre>
+
+        <h3>3.2 return 语句</h3>
+        <pre><code>// 从方法返回值
+int Add(int a, int b)
+{
+    return a + b;
+}
+
+// 提前退出方法
+void ProcessData(string data)
+{
+    if (string.IsNullOrEmpty(data))
+    {
+        return;  // 提前退出
+    }
+    // 处理数据...
+}</code></pre>
+      </section>
+
+      <section>
+        <h2>4. 异常处理</h2>
+
+        <pre><code>try
+{
+    // 可能抛出异常的代码
+    int result = Divide(10, 0);
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine($"除零错误: {ex.Message}");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"其他错误: {ex.Message}");
+}
+finally
+{
+    Console.WriteLine("无论是否发生异常都会执行");
+}
+
+int Divide(int a, int b)
+{
+    if (b == 0)
+    {
+        throw new DivideByZeroException("除数不能为零");
+    }
+    return a / b;
+}</code></pre>
+      </section>
+    </main>
+
+    <footer>
+      <p>最后更新: <time datetime="2023-11-15">2025年5月30日</time></p>
+      <p>© C#学习笔记</p>
+    </footer>
+  </body>
+</html>

@@ -3,479 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unity 游戏开发知识</title>
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #f5f5f5;
-      }
-
-      h1,
-      h2,
-      h3 {
-        color: #2c3e50;
-      }
-
-      h1 {
-        border-bottom: 2px solid #6a5acd;
-        padding-bottom: 10px;
-        text-align: center;
-      }
-
-      h2 {
-        background-color: #e6e6fa;
-        padding: 8px 12px;
-        border-left: 4px solid #6a5acd;
-        margin-top: 30px;
-      }
-
-      code {
-        background-color: #f0f0f0;
-        padding: 2px 4px;
-        border-radius: 3px;
-        font-family: "Consolas", "Courier New", monospace;
-        color: #333;
-      }
-
-      pre {
-        background-color: #282c34;
-        padding: 15px;
-        border-radius: 5px;
-        overflow-x: auto;
-        color: #abb2bf;
-      }
-
-      .note {
-        background-color: #e6e6fa;
-        border-left: 4px solid #6a5acd;
-        padding: 10px 15px;
-        margin: 15px 0;
-      }
-
-      .warning {
-        background-color: #fff3cd;
-        border-left: 4px solid #ffc107;
-        padding: 10px 15px;
-        margin: 15px 0;
-      }
-
-      table {
-        border-collapse: collapse;
-        width: 100%;
-        margin: 20px 0;
-      }
-
-      th,
-      td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-      }
-
-      th {
-        background-color: #6a5acd;
-        color: white;
-      }
-
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-      .home-link {
-        display: inline-block;
-        margin: 20px 0;
-        padding: 8px 15px;
-        background-color: #6a5acd;
-        color: white;
-        text-decoration: none;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-      }
-
-      .home-link:hover {
-        background-color: #5141a8;
-      }
-    </style>
+    <title>Unity 知识目录</title>
+    <link rel="stylesheet" href="/assets/css/common.css" />
   </head>
   <body>
     <header>
-      <h1>Unity 游戏开发知识大全</h1>
-      <p>从入门到精通的Unity游戏开发知识整理</p>
-      <a href="/index.html" class="home-link">返回主页</a>
+      <h1>Unity 游戏开发知识目录</h1>
+      <p>点击下方链接查看各章节详细内容</p>
+      <a href="/index.html" class="btn">返回主页</a>
     </header>
 
-    <nav>
-      <h2>目录</h2>
-      <ul>
-        <li><a href="#basics">Unity基础</a></li>
-        <li><a href="#scripting">Unity脚本编程</a></li>
-        <li><a href="#physics">物理系统</a></li>
-        <li><a href="#ui">UI系统</a></li>
-        <li><a href="#animation">动画系统</a></li>
-        <li><a href="#optimization">性能优化</a></li>
-      </ul>
-    </nav>
-
     <main>
-      <article id="basics">
-        <h2>1. Unity基础</h2>
+      <div class="card">
+        <h2 class="card-title">1. Unity基础</h2>
+        <ul class="link-list">
+          <li class="link-item">
+            <a href="basics/interface.html" class="topic-link">
+              <h4>1.1 Unity界面概述</h4>
+              <p class="topic-desc">场景视图、游戏视图、层次结构等核心界面</p>
+            </a>
+          </li>
+          <li class="link-item">
+            <a href="basics/gameobjects.html" class="topic-link">
+              <h4>1.2 游戏对象与组件</h4>
+              <p class="topic-desc">GameObject和Component的关系与常用组件</p>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-        <section>
-          <h3>1.1 Unity界面概述</h3>
-          <ul>
-            <li><strong>场景视图(Scene View)</strong>：编辑游戏场景</li>
-            <li><strong>游戏视图(Game View)</strong>：预览游戏运行效果</li>
-            <li>
-              <strong>层次结构(Hierarchy)</strong>：显示当前场景中的所有对象
-            </li>
-            <li><strong>项目(Project)</strong>：管理所有游戏资源</li>
-            <li>
-              <strong>检查器(Inspector)</strong>：查看和编辑选定对象的属性
-            </li>
-          </ul>
-        </section>
+      <div class="card">
+        <h2 class="card-title">2. Unity脚本编程</h2>
+        <ul class="link-list">
+          <li class="link-item">
+            <a href="scripting/lifecycle.html" class="topic-link">
+              <h4>2.1 MonoBehaviour生命周期</h4>
+              <p class="topic-desc">Awake、Start、Update等关键方法</p>
+            </a>
+          </li>
+          <li class="link-item">
+            <a href="scripting/input.html" class="topic-link">
+              <h4>2.2 输入系统</h4>
+              <p class="topic-desc">键盘、鼠标和触摸输入处理</p>
+            </a>
+          </li>
+          <li class="link-item">
+            <a href="scripting/coroutines.html" class="topic-link">
+              <h4>2.3 协程(Coroutine)</h4>
+              <p class="topic-desc">多帧执行的异步操作处理</p>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-        <section>
-          <h3>1.2 游戏对象与组件</h3>
-          <div class="note">
-            Unity采用组件化设计，GameObject是容器，Component是功能单元
-          </div>
+      <div class="card">
+        <h2 class="card-title">3. 物理系统</h2>
+        <ul class="link-list">
+          <li class="link-item">
+            <a href="physics/rigidbody.html" class="topic-link">
+              <h4>3.1 刚体与碰撞</h4>
+              <p class="topic-desc">Rigidbody和Collider的使用</p>
+            </a>
+          </li>
+          <li class="link-item">
+            <a href="physics/triggers.html" class="topic-link">
+              <h4>3.2 触发器</h4>
+              <p class="topic-desc">OnTriggerEnter等触发事件</p>
+            </a>
+          </li>
+          <li class="link-item">
+            <a href="physics/materials.html" class="topic-link">
+              <h4>3.3 物理材质</h4>
+              <p class="topic-desc">摩擦力和弹性的控制</p>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-          <pre><code>// 创建新游戏对象
-GameObject player = new GameObject("Player");
+      <div class="card">
+        <h2 class="card-title">4. UI系统</h2>
+        <ul class="link-list">
+          <li class="link-item">
+            <a href="ui/elements.html" class="topic-link">
+              <h4>4.1 Canvas与UI元素</h4>
+              <p class="topic-desc">Text、Button、Slider等UI组件</p>
+            </a>
+          </li>
+          <li class="link-item">
+            <a href="ui/events.html" class="topic-link">
+              <h4>4.2 事件系统</h4>
+              <p class="topic-desc">IPointerEnterHandler等接口使用</p>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-// 添加组件
-player.AddComponent&lt;Rigidbody&gt;();
-player.AddComponent&lt;CapsuleCollider&gt;();</code></pre>
+      <div class="card">
+        <h2 class="card-title">5. 动画系统</h2>
+        <ul class="link-list">
+          <li class="link-item">
+            <a href="animation/animator.html" class="topic-link">
+              <h4>5.1 Animator控制器</h4>
+              <p class="topic-desc">状态机和动画参数控制</p>
+            </a>
+          </li>
+          <li class="link-item">
+            <a href="animation/curves.html" class="topic-link">
+              <h4>5.2 动画曲线</h4>
+              <p class="topic-desc">AnimationCurve的应用</p>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-          <table>
-            <tr>
-              <th>常用组件</th>
-              <th>描述</th>
-            </tr>
-            <tr>
-              <td>Transform</td>
-              <td>控制对象的位置、旋转和缩放</td>
-            </tr>
-            <tr>
-              <td>Rigidbody</td>
-              <td>物理模拟主体</td>
-            </tr>
-            <tr>
-              <td>Collider</td>
-              <td>碰撞检测</td>
-            </tr>
-            <tr>
-              <td>Renderer</td>
-              <td>渲染对象</td>
-            </tr>
-          </table>
-        </section>
-      </article>
-
-      <article id="scripting">
-        <h2>2. Unity脚本编程</h2>
-
-        <section>
-          <h3>2.1 MonoBehaviour生命周期</h3>
-          <pre><code>using UnityEngine;
-
-public class PlayerController : MonoBehaviour
-{
-    // 初始化(脚本启用时调用)
-    void Awake() { /* ... */ }
-    
-    // 开始(第一帧更新前调用)
-    void Start() { /* ... */ }
-    
-    // 每帧更新
-    void Update() { /* ... */ }
-    
-    // 固定时间步长更新(用于物理计算)
-    void FixedUpdate() { /* ... */ }
-    
-    // 渲染后调用
-    void LateUpdate() { /* ... */ }
-    
-    // 对象启用/禁用时调用
-    void OnEnable() { /* ... */ }
-    void OnDisable() { /* ... */ }
-    
-    // 对象销毁时调用
-    void OnDestroy() { /* ... */ }
-}</code></pre>
-        </section>
-
-        <section>
-          <h3>2.2 输入系统</h3>
-          <pre><code>void Update()
-{
-    // 键盘输入
-    float moveHorizontal = Input.GetAxis("Horizontal");
-    float moveVertical = Input.GetAxis("Vertical");
-    
-    // 鼠标输入
-    if (Input.GetMouseButtonDown(0)) {
-        Debug.Log("Left mouse button clicked");
-    }
-    
-    // 触摸输入
-    if (Input.touchCount > 0) {
-        Touch touch = Input.GetTouch(0);
-        Vector2 touchPos = touch.position;
-    }
-}</code></pre>
-        </section>
-
-        <section>
-          <h3>2.3 协程(Coroutine)</h3>
-          <div class="note">
-            协程允许在多个帧中执行代码，非常适合处理延时和异步操作
-          </div>
-
-          <pre><code>IEnumerator FadeIn() 
-{
-    float alpha = 0;
-    while (alpha < 1)
-    {
-        alpha += Time.deltaTime * 0.5f;
-        GetComponent&lt;Renderer&gt;().material.color = new Color(1, 1, 1, alpha);
-        yield return null; // 等待下一帧
-    }
-}
-
-// 启动协程
-StartCoroutine(FadeIn());</code></pre>
-        </section>
-      </article>
-
-      <article id="physics">
-        <h2>3. 物理系统</h2>
-
-        <section>
-          <h3>3.1 刚体与碰撞</h3>
-          <pre><code>public class BallController : MonoBehaviour
-{
-    private Rigidbody rb;
-    
-    void Start()
-    {
-        rb = GetComponent&lt;Rigidbody&gt;();
-    }
-    
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Wall")
-        {
-            Debug.Log("Hit the wall!");
-        }
-    }
-}</code></pre>
-        </section>
-
-        <section>
-          <h3>3.2 触发器</h3>
-          <pre><code>void OnTriggerEnter(Collider other)
-{
-    if (other.CompareTag("Collectible"))
-    {
-        Destroy(other.gameObject);
-        score++;
-    }
-}</code></pre>
-        </section>
-
-        <section>
-          <h3>3.3 物理材质</h3>
-          <div class="warning">
-            注意：物理材质用于控制摩擦力和弹性，需要在Collider组件中应用
-          </div>
-
-          <table>
-            <tr>
-              <th>属性</th>
-              <th>描述</th>
-            </tr>
-            <tr>
-              <td>Dynamic Friction</td>
-              <td>运动时摩擦力</td>
-            </tr>
-            <tr>
-              <td>Static Friction</td>
-              <td>静止时摩擦力</td>
-            </tr>
-            <tr>
-              <td>Bounciness</td>
-              <td>弹性系数</td>
-            </tr>
-          </table>
-        </section>
-      </article>
-
-      <article id="ui">
-        <h2>4. UI系统</h2>
-
-        <section>
-          <h3>4.1 Canvas与UI元素</h3>
-          <ul>
-            <li><strong>Canvas</strong>：所有UI元素的容器</li>
-            <li><strong>Text</strong>：显示文本</li>
-            <li><strong>Image</strong>：显示图片</li>
-            <li><strong>Button</strong>：可点击按钮</li>
-            <li><strong>Slider</strong>：滑动条</li>
-          </ul>
-
-          <pre><code>using UnityEngine.UI;
-
-public class UIManager : MonoBehaviour
-{
-    public Text scoreText;
-    public Button restartButton;
-    
-    void Start()
-    {
-        restartButton.onClick.AddListener(RestartGame);
-    }
-    
-    void Update()
-    {
-        scoreText.text = "Score: " + score.ToString();
-    }
-    
-    void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-}</code></pre>
-        </section>
-
-        <section>
-          <h3>4.2 事件系统</h3>
-          <div class="note">
-            EventSystem处理所有UI输入事件，包括鼠标、触摸和游戏手柄
-          </div>
-
-          <pre><code>using UnityEngine.EventSystems;
-
-public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
-{
-    public GameObject tooltipPanel;
-    
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        tooltipPanel.SetActive(true);
-    }
-    
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        tooltipPanel.SetActive(false);
-    }
-}</code></pre>
-        </section>
-      </article>
-
-      <article id="animation">
-        <h2>5. 动画系统</h2>
-
-        <section>
-          <h3>5.1 Animator控制器</h3>
-          <pre><code>public class PlayerAnimation : MonoBehaviour
-{
-    private Animator animator;
-    private float speed;
-    
-    void Start()
-    {
-        animator = GetComponent&lt;Animator&gt;();
-    }
-    
-    void Update()
-    {
-        speed = Input.GetAxis("Vertical");
-        animator.SetFloat("Speed", speed);
-        
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            animator.SetTrigger("Jump");
-        }
-    }
-}</code></pre>
-        </section>
-
-        <section>
-          <h3>5.2 动画曲线</h3>
-          <div class="note">
-            动画曲线(Animation Curve)可用于控制随时间变化的数值
-          </div>
-
-          <pre><code>public AnimationCurve bounceCurve;
-private float timeElapsed;
-
-void Update()
-{
-    timeElapsed += Time.deltaTime;
-    float height = bounceCurve.Evaluate(timeElapsed);
-    transform.position = new Vector3(0, height, 0);
-}</code></pre>
-        </section>
-      </article>
-
-      <article id="optimization">
-        <h2>6. 性能优化</h2>
-
-        <section>
-          <h3>6.1 对象池</h3>
-          <pre><code>public class ObjectPool : MonoBehaviour
-{
-    public GameObject prefab;
-    public int poolSize = 10;
-    private List&lt;GameObject&gt; pool = new List&lt;GameObject&gt;();
-    
-    void Start()
-    {
-        for (int i = 0; i < poolSize; i++)
-        {
-            GameObject obj = Instantiate(prefab);
-            obj.SetActive(false);
-            pool.Add(obj);
-        }
-    }
-    
-    public GameObject GetObject()
-    {
-        foreach (GameObject obj in pool)
-        {
-            if (!obj.activeInHierarchy)
-            {
-                obj.SetActive(true);
-                return obj;
-            }
-        }
-        
-        GameObject newObj = Instantiate(prefab);
-        pool.Add(newObj);
-        return newObj;
-    }
-}</code></pre>
-        </section>
-
-        <section>
-          <h3>6.2 优化技巧</h3>
-          <ul>
-            <li>
-              <strong>减少GetComponent调用</strong>：在Start/Awake中缓存组件引用
-            </li>
-            <li><strong>避免使用FindObject</strong>：改用拖拽赋值或静态引用</li>
-            <li><strong>合并材质</strong>：减少Draw Call</li>
-            <li><strong>使用LOD</strong>：根据距离切换不同细节模型</li>
-            <li><strong>使用Occlusion Culling</strong>：剔除视野外的对象</li>
-          </ul>
-        </section>
-      </article>
+      <div class="card">
+        <h2 class="card-title">6. 性能优化</h2>
+        <ul class="link-list">
+          <li class="link-item">
+            <a href="optimization/pooling.html" class="topic-link">
+              <h4>6.1 对象池</h4>
+              <p class="topic-desc">重用对象减少Instantiate/Destroy</p>
+            </a>
+          </li>
+          <li class="link-item">
+            <a href="optimization/tips.html" class="topic-link">
+              <h4>6.2 优化技巧</h4>
+              <p class="topic-desc">性能优化的实用方法</p>
+            </a>
+          </li>
+        </ul>
+      </div>
     </main>
 
     <footer>
