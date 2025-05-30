@@ -1,103 +1,227 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>学习笔记</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的学习笔记</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
     <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        color: #333;
+      :root {
+        --primary-color: #4361ee;
+        --secondary-color: #3f37c9;
+        --accent-color: #4895ef;
+        --light-color: #f8f9fa;
+        --dark-color: #212529;
+        --text-color: #333;
+        --border-radius: 8px;
+        --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
       }
-      img {
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--light-color);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: var(--box-shadow);
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+      }
+
+      nav a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      main {
+        display: flex;
+        flex: 1;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        gap: 2rem;
+      }
+
+      article {
+        flex: 3;
+        background: white;
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+      }
+
+      article h2 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+
+      article p {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      aside {
+        flex: 1;
+        background: white;
+        padding: 1.5rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        align-self: flex-start;
+      }
+
+      aside h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--accent-color);
+      }
+
+      aside ul {
+        list-style: none;
+      }
+
+      aside li {
+        margin-bottom: 0.8rem;
+      }
+
+      aside a {
+        color: var(--text-color);
+        text-decoration: none;
+        display: block;
+        padding: 0.5rem;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+      }
+
+      aside a:hover {
+        color: var(--primary-color);
+        background-color: rgba(67, 97, 238, 0.1);
+        transform: translateX(5px);
+      }
+
+      footer {
+        background: var(--dark-color);
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: auto;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      /* 响应式设计 */
+      @media (max-width: 768px) {
+        main {
+          flex-direction: column;
+        }
+
+        nav ul {
+          flex-direction: column;
+          gap: 0.5rem;
+          align-items: center;
+        }
       }
     </style>
   </head>
-
   <body>
-    <!-- 导航栏 -->
-    <nav style="background-color: #333; padding: 15px">
-      <div style="max-width: 1200px; margin: 0 auto">
-        <a
-          href="/"
-          style="color: white; text-decoration: none; font-weight: bold"
-          >学习笔记</a
-        >
-        <div style="float: right">
-          <a
-            href="/notes"
-            style="color: white; text-decoration: none; margin-left: 20px"
-            >笔记</a
-          >
-          <a
-            href="/categories"
-            style="color: white; text-decoration: none; margin-left: 20px"
-            >分类</a
-          >
-          <a
-            href="/about"
-            style="color: white; text-decoration: none; margin-left: 20px"
-            >关于</a
-          >
-        </div>
-      </div>
-    </nav>
+    <header>
+      <h1>我的学习笔记</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="notes/Csharp/csharp.html">C#笔记</a></li>
+          <li><a href="notes/unity/unity.html">Unity笔记</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- 内容区 -->
-    <div style="max-width: 800px; margin: 30px auto; padding: 20px">
-      <h1 style="border-bottom: 1px solid #eee; padding-bottom: 10px">
-        最新笔记
-      </h1>
+    <main>
+      <article>
+        <h2>欢迎来到我的学习笔记</h2>
+        <p>
+          这里记录了我的技术学习历程和重要知识总结。从编程语言到游戏开发，从基础概念到高级技巧，我将持续更新和整理有价值的学习内容。
+        </p>
+        <p>
+          学习是一个不断积累的过程，希望这些笔记不仅能帮助我自己回顾知识，也能为其他学习者提供一些参考和启发。
+        </p>
+        <p>
+          目前主要包含C#编程语言和Unity游戏开发的相关内容，后续会逐步扩展更多技术领域的学习笔记。
+        </p>
+      </article>
 
-      <!-- 笔记列表 -->
-      <div style="margin-top: 30px">
-        <div
-          style="
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed #eee;
-          "
-        >
-          <h2>
-            <a href="/note/1" style="text-decoration: none; color: #333"
-              >笔记标题1</a
+      <aside>
+        <h3>最近更新</h3>
+        <ul>
+          <li><a href="notes/Csharp/csharp.html">C#知识大全</a></li>
+          <li><a href="notes/unity/unity.html">Unity游戏开发指南</a></li>
+        </ul>
+
+        <h3 style="margin-top: 2rem">学习资源</h3>
+        <ul>
+          <li>
+            <a
+              href="https://docs.microsoft.com/zh-cn/dotnet/csharp/"
+              target="_blank"
+              >C#官方文档</a
             >
-          </h2>
-          <p style="color: #666; font-size: 14px">2023-11-01 | 分类: 编程</p>
-          <p>这里是笔记的简短摘要...</p>
-        </div>
-
-        <div
-          style="
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed #eee;
-          "
-        >
-          <h2>
-            <a href="/note/2" style="text-decoration: none; color: #333"
-              >笔记标题2</a
+          </li>
+          <li>
+            <a href="https://unity.com/cn/learn" target="_blank"
+              >Unity学习平台</a
             >
-          </h2>
-          <p style="color: #666; font-size: 14px">2023-10-25 | 分类: 算法</p>
-          <p>这里是笔记的简短摘要...</p>
-        </div>
-      </div>
-    </div>
+          </li>
+        </ul>
+      </aside>
+    </main>
 
-    <!-- 页脚 -->
-    <footer
-      style="background-color: #f1f1f1; text-align: center; padding: 30px"
-    >
-      <p>© 2023 我的学习笔记</p>
-      <p style="font-size: 12px">
-        Powered by
-        <a href="https://github.com/dongxinpersonal/myStation">myStation</a>
-      </p>
+    <footer>
+      <p>&copy; 2025 我的学习笔记 | 由灵码提供技术支持</p>
     </footer>
+
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
